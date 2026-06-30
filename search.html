@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiskyVibe - Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Search Header -->
+        <header class="search-header">
+            <div class="search-input-wrap">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" id="search-input" class="search-input" data-loc="searchPlaceholder" placeholder="위스키 이름, 브랜드 검색..." autocomplete="off">
+            </div>
+            <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">KR | EN</button>
+        </header>
+
+        <main class="content-scroll">
+            <div class="results-list" id="results-container">
+                <!-- Search Results Inject Here -->
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="ph ph-house"></i>
+                <span data-loc="navHome">Home</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="ph-fill ph-compass"></i>
+                <span data-loc="navSearch">Search</span>
+            </a>
+            <a href="mybar.html" class="nav-item">
+                <i class="ph ph-brandy"></i>
+                <span data-loc="navMyBar">My Bar</span>
+            </a>
+        </nav>
+
+        <!-- Information Detail Overlay -->
+        <div class="detail-overlay" id="detail-overlay">
+            <div class="detail-header">
+                <button class="icon-btn" aria-label="Back" onclick="closeDetail()"><i class="ph-bold ph-arrow-left"></i></button>
+            </div>
+            <div class="detail-content">
+                <div class="detail-hero">
+                    <img src="assets/whiskey_bottle.png" alt="Whiskey" class="detail-bottle" id="detail-img">
+                    <div class="detail-title-card">
+                        <div class="detail-name-en" id="detail-name-en">George T. Stagg</div>
+                        <div class="detail-name-ko" id="detail-name-ko">조지 T. 스태그</div>
+                    </div>
+                </div>
+
+                <!-- Batch / Age Tabs -->
+                <div class="batch-tabs-scroll" id="batch-tabs">
+                    <!-- Tabs Inject Here -->
+                </div>
+
+                <!-- Detail Panel -->
+                <div class="info-panel">
+                    <div class="rec-badge" id="rec-badge" data-loc="recommendedBadge">★ 추천 배치</div>
+                    
+                    <div class="info-row">
+                        <span class="info-lbl" data-loc="proofLabel">도수 (Proof/ABV)</span>
+                        <span class="info-val" id="info-proof">-</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-lbl" data-loc="maturationLabel">숙성 정보</span>
+                        <span class="info-val" id="info-maturation">-</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-lbl" data-loc="ratingsLabel">전문가 평점</span>
+                        <ul class="ratings-list" id="info-ratings">
+                            <!-- Ratings Inject Here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Action Link -->
+                <a href="#" class="link-live-prices" id="link-live-prices" data-loc="viewLivePrices">이 위스키의 실시간 커뮤니티 시세 보기</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

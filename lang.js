@@ -65,7 +65,18 @@ const locData = {
         badgePeat: "피트 몬스터",
         badgePrice: "시세왕",
         badgeFirst: "첫 모금",
-        levelUpModalTitle: "레벨 업 축하합니다!"
+        levelUpModalTitle: "레벨 업 축하합니다!",
+
+        // search.html
+        searchPlaceholder: "위스키 이름, 브랜드 검색...",
+        categoryLabel: "카테고리",
+        abvLabel: "도수",
+        recommendedBadge: "★ 추천 배치",
+        viewLivePrices: "이 위스키의 실시간 커뮤니티 시세 보기",
+        noResults: "검색 결과가 없습니다.",
+        proofLabel: "도수 (Proof/ABV)",
+        maturationLabel: "숙성 정보",
+        ratingsLabel: "전문가 평점"
     },
     en: {
         langToggle: "EN | KR",
@@ -132,7 +143,18 @@ const locData = {
         badgePeat: "Peat Monster",
         badgePrice: "Price King",
         badgeFirst: "First Sip",
-        levelUpModalTitle: "Congratulations on Level Up!"
+        levelUpModalTitle: "Congratulations on Level Up!",
+
+        // search.html
+        searchPlaceholder: "Search whiskey, brand...",
+        categoryLabel: "Category",
+        abvLabel: "ABV",
+        recommendedBadge: "★ Recommended",
+        viewLivePrices: "View live community prices for this dram",
+        noResults: "No results found.",
+        proofLabel: "Proof / ABV",
+        maturationLabel: "Maturation Details",
+        ratingsLabel: "Expert Ratings"
     }
 };
 
