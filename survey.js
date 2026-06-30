@@ -172,15 +172,21 @@ nextBtn.addEventListener("click", () => {
         currentStep++;
         renderStep();
     } else {
-        // Final Submission: Save to localStorage
-        const resultParams = {
+        // Final Submission: Navigate with Query Params
+        const sw = encodeURIComponent(optionValueMap[userSelections[1]]);
+        const sm = encodeURIComponent(optionValueMap[userSelections[2]]);
+        const int = encodeURIComponent(optionValueMap[userSelections[3]]);
+        const purp = encodeURIComponent(optionValueMap[userSelections[4]]);
+        
+        // Also save to localStorage in case needed for backup
+        localStorage.setItem("whiskySurveyParams", JSON.stringify({
             param_sweetness: optionValueMap[userSelections[1]],
             param_smoky: optionValueMap[userSelections[2]],
             param_intensity: optionValueMap[userSelections[3]],
             param_purpose: optionValueMap[userSelections[4]]
-        };
-        localStorage.setItem("whiskySurveyParams", JSON.stringify(resultParams));
-        window.location.href = "result.html";
+        }));
+
+        window.location.href = `result.html?sweet=${sw}&smoke=${sm}&abv=${int}&budget=${purp}`;
     }
 });
 

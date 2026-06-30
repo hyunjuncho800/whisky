@@ -29,7 +29,7 @@
                 <div class="hero-content">
                     <h2 class="hero-title" data-loc="homeHeroTitle">Find Your Perfect Dram 🥃</h2>
                     <p class="hero-subtitle" data-loc="homeHeroSub">Discover your whiskey taste profile in 30 seconds.</p>
-                    <button class="cta-button" data-loc="startTasteTest" onclick="window.location.href='survey.html'">
+                    <button class="cta-button" data-loc="startTasteTest" onclick="startSurvey()">
                         Start Taste Test
                         <i class="ph-bold ph-arrow-right"></i>
                     </button>
@@ -171,6 +171,13 @@
             </a>
         </nav>
     </div>
+    <!-- Scripts -->
+    <script>
+        function startSurvey() {
+            localStorage.removeItem('whiskySurveyParams'); // Clean previous state
+            window.location.href = 'survey.html';
+        }
+    </script>
     <script src="lang.js"></script>
 </body>
 </html>

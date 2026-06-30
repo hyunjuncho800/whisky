@@ -1,12 +1,7 @@
 // mybar.js
 
-// Mock whisky catalog for resolving names and images
-const whisky_catalog = {
-    "1": { name: "Stagg Jr.", nameEn: "Stagg Jr.", img: "assets/whiskey_bottle.png" },
-    "2": { name: "발베니 12년 더블우드", nameEn: "Balvenie 12Y", img: "assets/whiskey_bottle.png" },
-    "3": { name: "라가불린 16년", nameEn: "Lagavulin 16Y", img: "assets/whiskey_bottle.png" },
-    "8": { name: "부커스 버번", nameEn: "Booker's Bourbon", img: "assets/whiskey_bottle.png" }
-};
+let masterData = [];
+let whisky_catalog = {};
 
 // All available badges in the system
 const all_badges = [
@@ -16,10 +11,68 @@ const all_badges = [
     { id: "first", locKey: "badgeFirst", icon: "ph-brandy" }
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+// Parse CSV
+function parseCSV(text) {
+    const lines = [];
+    let currentLine = [];
+    let currentVal = '';
+    let inQuotes = false;
+    for (let i = 0; i < text.length; i++) {
+        const c = text[i];
+        if (inQuotes) {
+            if (c === '"') {
+                if (i + 1 < text.length && text[i+1] === '"') { currentVal += '"'; i++; } 
+                else { inQuotes = false; }
+            } else { currentVal += c; }
+        } else {
+            if (c === '"') { inQuotes = true; } 
+            else if (c === ',') { currentLine.push(currentVal.trim()); currentVal = ''; } 
+            else if (c === '\n' || c === '\r') {
+                if (c === '\r' && i + 1 < text.length && text[i+1] === '\n') { i++; }
+                currentLine.push(currentVal.trim());
+                if (currentLine.length > 1 || currentLine[0] !== '') lines.push(currentLine);
+                currentLine = []; currentVal = '';
+            } else { currentVal += c; }
+        }
+    }
+    if (currentVal !== '' || currentLine.length > 0) { currentLine.push(currentVal.trim()); lines.push(currentLine); }
+    return lines;
+}
+
+function transformToObjects(rows) {
+    if (rows.length < 2) return [];
+    const headers = rows[0];
+    const data = [];
+    for (let i = 1; i < rows.length; i++) {
+        const obj = {};
+        for (let j = 0; j < headers.length; j++) { obj[headers[j]] = rows[i][j] || ''; }
+        data.push(obj);
+    }
+    return data;
+}
+
+async function initMyBar() {
+    try {
+        const response = await fetch('whiskyvibe_master_dataset.csv');
+        const csvText = await response.text();
+        const parsedRows = parseCSV(csvText);
+        masterData = transformToObjects(parsedRows);
+        
+        masterData.forEach(item => {
+            if (!whisky_catalog[item.Whisky_ID]) {
+                whisky_catalog[item.Whisky_ID] = {
+                    name: item.Name_KO,
+                    nameEn: item.Name_EN,
+                    img: "assets/whiskey_bottle.png"
+                };
+            }
+        });
+    } catch (e) {
+        console.error("Failed to load CSV", e);
+    }
+
     renderMyBar();
-    window.addEventListener('languageChanged', renderMyBar);
-});
+}
 
 function renderMyBar() {
     const lang = window.currentLang || localStorage.getItem('whiskyLang') || 'kr';
@@ -36,10 +89,14 @@ function renderMyBar() {
     const expRemainder = totalExp % 100;
     const progressPercent = expRemainder; // since threshold is 100
 
-    document.getElementById('profile-badge').textContent = userProfile.user_badge;
-    document.getElementById('profile-level-num').textContent = currentLevel;
-    document.getElementById('profile-exp-text').textContent = `${expRemainder} / 100 EXP`;
-    document.getElementById('profile-exp-bar').style.width = `${progressPercent}%`;
+    const bBadge = document.getElementById('profile-badge');
+    if (bBadge) bBadge.textContent = userProfile.user_badge;
+    const lNum = document.getElementById('profile-level-num');
+    if (lNum) lNum.textContent = currentLevel;
+    const eText = document.getElementById('profile-exp-text');
+    if (eText) eText.textContent = `${expRemainder} / 100 EXP`;
+    const eBar = document.getElementById('profile-exp-bar');
+    if (eBar) eBar.style.width = `${progressPercent}%`;
 
     // 2. Virtual Cabinet (Aggregate from reviews)
     const reviews = JSON.parse(localStorage.getItem("wv_reviews") || "[]");
@@ -60,8 +117,8 @@ function renderMyBar() {
         cabinetGrid.innerHTML = `
             <div class="cabinet-empty">
                 <i class="ph ph-brandy cabinet-empty-icon"></i>
-                <span data-loc="addFirstWhiskey">${locData[lang].addFirstWhiskey}</span>
-                <button class="btn-add-whiskey" onclick="window.location.href='index.html'">+ Explore</button>
+                <span data-loc="addFirstWhiskey">${locData[lang]?.addFirstWhiskey || '첫 위스키를 장식장에 추가해보세요!'}</span>
+                <button class="btn-add-whiskey" onclick="window.location.href='search.html'">+ Explore</button>
             </div>
         `;
     } else {
@@ -69,7 +126,7 @@ function renderMyBar() {
         let html = '';
         for (let i = 0; i < whiskyIds.length; i++) {
             const wid = whiskyIds[i];
-            const data = whisky_catalog[wid] || { name: "Unknown", nameEn: "Unknown", img: "" };
+            const data = whisky_catalog[wid] || { name: "Unknown", nameEn: "Unknown", img: "assets/whiskey_bottle.png" };
             const rating = cabinetMap[wid].rating;
             const displayName = lang === 'en' ? data.nameEn : data.name;
 
@@ -82,7 +139,7 @@ function renderMyBar() {
             let starsHtml = Array(5).fill(0).map((_, idx) => idx < rating ? '<i class="ph-fill ph-star"></i>' : '<i class="ph ph-star"></i>').join('');
 
             html += `
-                <div class="cabinet-item">
+                <div class="cabinet-item" onclick="window.location.href='result.html?wid=${wid}'">
                     <img src="${data.img}" class="cabinet-bottle" alt="${displayName}">
                     <div class="cabinet-item-name">${displayName}</div>
                     <div class="cabinet-item-rating">${starsHtml}</div>
@@ -100,36 +157,47 @@ function renderMyBar() {
     const unlockedSet = new Set();
     if (myReviews.length > 0) unlockedSet.add("first");
     if (myPrices.length > 0) unlockedSet.add("price");
-    if (totalExp >= 100) unlockedSet.add("sherry"); // Mock trigger for Blended Master
-    if (totalExp >= 500) unlockedSet.add("peat"); // Mock trigger for Single Malt Master
+    if (myReviews.length > 5) unlockedSet.add("sherry"); // mock unlock conditions
+    if (myPrices.length > 5) unlockedSet.add("peat");
 
-    const badgesContainer = document.getElementById('badges-container');
-    badgesContainer.innerHTML = all_badges.map(b => {
+    const badgeGrid = document.getElementById('badge-grid');
+    badgeGrid.innerHTML = all_badges.map(b => {
         const isUnlocked = unlockedSet.has(b.id);
-        const name = locData[lang][b.locKey];
+        const name = locData[lang] && locData[lang][b.locKey] ? locData[lang][b.locKey] : b.id;
         return `
-            <div class="badge-card ${isUnlocked ? 'unlocked' : 'locked'}">
-                <div class="badge-icon-wrap">
-                    <i class="${isUnlocked ? 'ph-fill' : 'ph'} ${b.icon}"></i>
-                    ${!isUnlocked ? '<div class="lock-overlay"><i class="ph-bold ph-lock-key"></i></div>' : ''}
-                </div>
+            <div class="badge-item ${isUnlocked ? 'unlocked' : ''}">
+                <div class="badge-icon"><i class="${b.icon}"></i></div>
                 <div class="badge-name">${name}</div>
             </div>
         `;
     }).join('');
 
-    // 4. Level Up Modal Check
-    // We check if we need to show a modal. To prevent showing it every time, we save 'lastSeenLevel' in localStorage.
-    const lastSeenLevel = parseInt(localStorage.getItem("wv_last_seen_level") || "1");
-    if (currentLevel > lastSeenLevel) {
-        setTimeout(() => {
-            document.getElementById('modal-level-text').textContent = `Level ${currentLevel}`;
-            document.getElementById('levelup-modal').classList.add('active');
-            localStorage.setItem("wv_last_seen_level", currentLevel.toString());
-        }, 500); // slight delay for effect
+    // Level up check
+    checkLevelUp(userProfile.user_exp);
+}
+
+let lastNotifiedLevel = parseInt(localStorage.getItem("wv_last_level") || "1");
+
+function checkLevelUp(exp) {
+    const currentLevel = Math.floor(exp / 100) + 1;
+    if (currentLevel > lastNotifiedLevel) {
+        showLevelUpModal(currentLevel);
+        lastNotifiedLevel = currentLevel;
+        localStorage.setItem("wv_last_level", lastNotifiedLevel);
     }
 }
 
-window.closeLevelModal = function() {
+function showLevelUpModal(level) {
+    const modal = document.getElementById('levelup-modal');
+    document.getElementById('modal-level-num').textContent = level;
+    modal.classList.add('active');
+}
+
+window.closeModal = function() {
     document.getElementById('levelup-modal').classList.remove('active');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    initMyBar();
+    window.addEventListener('languageChanged', renderMyBar);
+});

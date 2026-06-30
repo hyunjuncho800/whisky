@@ -125,7 +125,7 @@ function renderResults(query) {
 
         const card = document.createElement('div');
         card.className = 'result-card';
-        card.onclick = () => openDetail(info.Whisky_ID);
+        card.onclick = () => window.location.href = `result.html?wid=${info.Whisky_ID}`;
         card.innerHTML = `
             <div class="result-img-wrap">
                 <img src="${imgUrl}" alt="${displayName}" class="result-img">
