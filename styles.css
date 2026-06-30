@@ -1464,6 +1464,7 @@ body {
     left: 16px;
     color: var(--text-muted);
     font-size: 18px;
+    pointer-events: none;
 }
 
 .search-input {
