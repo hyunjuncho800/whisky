@@ -604,7 +604,7 @@ body {
 /* Survey Bottom Nav */
 .survey-bottom {
     position: absolute;
-    bottom: 0;
+    bottom: var(--nav-height);
     left: 0;
     right: 0;
     padding: 20px 24px 32px;
@@ -840,7 +840,7 @@ body {
 
 .sticky-bottom-btn {
     position: absolute;
-    bottom: 24px;
+    bottom: calc(var(--nav-height) + 24px);
     left: 24px;
     right: 24px;
     z-index: 30;
