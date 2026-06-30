@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiskyVibe - Premium Whiskey Curation</title>
+    <meta name="description" content="Discover your perfect dram with WhiskyVibe. A premium whiskey curation and community app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="logo">WhiskyVibe</h1>
+            <div class="header-actions">
+                <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" style="margin-right: 8px;">KR | EN</button>
+                <button class="icon-btn" aria-label="Search"><i class="ph ph-magnifying-glass"></i></button>
+                <button class="icon-btn notification" aria-label="Notifications"><i class="ph ph-bell"></i><span class="badge"></span></button>
+            </div>
+        </header>
+
+        <main class="content-scroll">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title" data-loc="homeHeroTitle">Find Your Perfect Dram 🥃</h2>
+                    <p class="hero-subtitle" data-loc="homeHeroSub">Discover your whiskey taste profile in 30 seconds.</p>
+                    <button class="cta-button" data-loc="startTasteTest" onclick="window.location.href='survey.html'">
+                        Start Taste Test
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="hero-glow"></div>
+            </section>
+
+            <!-- Live Price Reports -->
+            <section class="price-reports-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-loc="livePriceReports">Live Price Reports 📍</h2>
+                    <a href="#" class="see-all" data-loc="seeAll">See All</a>
+                </div>
+                <div class="horizontal-scroll">
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h3 class="whiskey-name">Macallan 12 Double Cask</h3>
+                            <span class="time">10 mins ago</span>
+                        </div>
+                        <div class="price-details">
+                            <span class="price">99,000 KRW</span>
+                            <div class="location">
+                                <i class="ph-fill ph-map-pin"></i>
+                                <span>Costco Busan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h3 class="whiskey-name">Balvenie 12 DoubleWood</h3>
+                            <span class="time">25 mins ago</span>
+                        </div>
+                        <div class="price-details">
+                            <span class="price">115,000 KRW</span>
+                            <div class="location">
+                                <i class="ph-fill ph-map-pin"></i>
+                                <span>GS25 Gangnam</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h3 class="whiskey-name">Glenfiddich 15</h3>
+                            <span class="time">1 hr ago</span>
+                        </div>
+                        <div class="price-details">
+                            <span class="price">142,000 KRW</span>
+                            <div class="location">
+                                <i class="ph-fill ph-map-pin"></i>
+                                <span>Emart Traders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tonight's Bottles -->
+            <section class="community-feed-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-loc="tonightsBottles">Tonight's Bottles 🥃</h2>
+                </div>
+                <div class="feed-container">
+                    <!-- Feed Card 1 -->
+                    <article class="feed-card">
+                        <div class="feed-header">
+                            <img src="C:\Users\HJ\.gemini\antigravity\brain\1aee8685-af20-45bf-9761-73b82b6af4dd\avatar_2_1782803732172.png" alt="User Avatar" class="avatar">
+                            <div class="user-info">
+                                <h4 class="username">WhiskeyLover99</h4>
+                                <span class="badge-role"><i class="ph-fill ph-seal-check"></i> Blended Master</span>
+                            </div>
+                            <div class="star-rating">
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star-half"></i>
+                            </div>
+                        </div>
+                        <div class="feed-image-container">
+                            <img src="C:\Users\HJ\.gemini\antigravity\brain\1aee8685-af20-45bf-9761-73b82b6af4dd\whiskey_bottle_1_1782803718662.png" alt="Whiskey Bottle" class="bottle-image">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="feed-content">
+                            <p class="review-text">Absolutely stunning dram for a quiet evening. The sherry notes are rich but not overpowering, with a long, spicy finish that lingers perfectly. Highly recommend!</p>
+                        </div>
+                        <div class="feed-actions">
+                            <button class="action-btn"><i class="ph ph-heart"></i> 124</button>
+                            <button class="action-btn"><i class="ph ph-chat-circle"></i> 18</button>
+                            <button class="action-btn share-btn"><i class="ph ph-share-network"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Feed Card 2 -->
+                    <article class="feed-card">
+                        <div class="feed-header">
+                            <img src="C:\Users\HJ\.gemini\antigravity\brain\1aee8685-af20-45bf-9761-73b82b6af4dd\avatar_2_1782803732172.png" alt="User Avatar" class="avatar" style="filter: hue-rotate(45deg);">
+                            <div class="user-info">
+                                <h4 class="username">MaltExplorer</h4>
+                                <span class="badge-role"><i class="ph-fill ph-medal"></i> Single Malt Novice</span>
+                            </div>
+                            <div class="star-rating">
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph ph-star"></i>
+                            </div>
+                        </div>
+                        <div class="feed-image-container">
+                            <img src="C:\Users\HJ\.gemini\antigravity\brain\1aee8685-af20-45bf-9761-73b82b6af4dd\whiskey_bottle_1_1782803718662.png" alt="Whiskey Bottle" class="bottle-image" style="transform: scaleX(-1);">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="feed-content">
+                            <p class="review-text">Trying out this Japanese classic tonight. Very delicate floral nose with subtle hints of honey. A bit lighter than I expected but still fantastic.</p>
+                        </div>
+                        <div class="feed-actions">
+                            <button class="action-btn liked"><i class="ph-fill ph-heart"></i> 89</button>
+                            <button class="action-btn"><i class="ph ph-chat-circle"></i> 5</button>
+                            <button class="action-btn share-btn"><i class="ph ph-share-network"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <i class="ph-fill ph-house"></i>
+                <span data-loc="navHome">Home</span>
+            </a>
+            <a href="#" class="nav-item" data-loc="navSearch">
+                <i class="ph ph-compass"></i>
+                <span>Search</span>
+            </a>
+            <a href="mybar.html" class="nav-item">
+                <i class="ph ph-brandy"></i>
+                <span data-loc="navMyBar">My Bar</span>
+            </a>
+        </nav>
+    </div>
+    <script src="lang.js"></script>
+</body>
+</html>

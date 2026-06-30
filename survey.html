@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiskyVibe - Taste Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="app-header survey-header">
+            <button class="icon-btn" onclick="window.location.href='index.html'" aria-label="Back">
+                <i class="ph ph-arrow-left"></i>
+            </button>
+            <div class="progress-container">
+                <span class="step-indicator" id="step-indicator">Question 1 of 4</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 25%;"></div>
+                </div>
+            </div>
+            <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">KR | EN</button>
+        </header>
+
+        <main class="survey-content content-scroll" id="survey-content">
+            <!-- Dynamic Content Injected via JS -->
+        </main>
+
+        <!-- Bottom Navigation -->
+        <div class="survey-bottom">
+            <button class="next-button" id="next-btn" disabled>Next</button>
+        </div>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="survey.js"></script>
+</body>
+</html>

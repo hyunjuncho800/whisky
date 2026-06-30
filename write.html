@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiskyVibe - Write</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="write-header">
+            <button class="icon-btn" onclick="window.location.href='result.html'" aria-label="Close">
+                <i class="ph ph-x"></i>
+            </button>
+            <h1 class="write-title" data-loc="shareDram">글쓰기</h1>
+            <button class="btn-submit" id="btn-submit" disabled data-loc="submitBtn">등록하기</button>
+        </header>
+
+        <main class="content-scroll">
+            <!-- Mode Selection -->
+            <div class="segment-ctrl">
+                <div class="segment-tab active" data-target="form-review" data-loc="tasteReview">리뷰 작성</div>
+                <div class="segment-tab" data-target="form-price" data-loc="priceReport">시세 제보</div>
+            </div>
+
+            <!-- Mode A: Taste Review Form -->
+            <section class="form-section active" id="form-review">
+                <!-- Whiskey Select -->
+                <div class="input-group">
+                    <select class="form-select" id="rev-whiskey">
+                        <option value="" disabled selected data-loc="selectWhiskey">위스키 선택</option>
+                        <option value="1">Stagg Jr. (Barrel Proof)</option>
+                        <option value="2">Balvenie 12Y DoubleWood</option>
+                        <option value="3">Lagavulin 16Y</option>
+                        <option value="8">Booker's Bourbon</option>
+                    </select>
+                </div>
+                
+                <!-- Batch Select (Dynamic visibility mock) -->
+                <div class="input-group">
+                    <select class="form-select" id="rev-batch">
+                        <option value="" disabled selected data-loc="selectBatch">배치/숙성 연도 선택</option>
+                        <option value="24A">Batch 24A</option>
+                        <option value="24B">Batch 24B</option>
+                        <option value="23B">Batch 23B</option>
+                    </select>
+                </div>
+
+                <!-- Star Rating -->
+                <div class="input-group">
+                    <div class="star-rating-input" id="star-rating">
+                        <i class="ph-fill ph-star" data-val="1"></i>
+                        <i class="ph-fill ph-star" data-val="2"></i>
+                        <i class="ph-fill ph-star" data-val="3"></i>
+                        <i class="ph-fill ph-star" data-val="4"></i>
+                        <i class="ph-fill ph-star" data-val="5"></i>
+                    </div>
+                </div>
+
+                <!-- Quick Tags -->
+                <div class="input-group">
+                    <div class="tags-container" id="review-tags">
+                        <span class="tag-pill" data-loc="tagSweet">달콤함</span>
+                        <span class="tag-pill" data-loc="tagVanilla">바닐라</span>
+                        <span class="tag-pill" data-loc="tagSmoky">스모키</span>
+                        <span class="tag-pill" data-loc="tagPeat">피트</span>
+                        <span class="tag-pill" data-loc="tagWoody">우디</span>
+                        <span class="tag-pill" data-loc="tagSpicy">스파이시</span>
+                        <span class="tag-pill" data-loc="tagCitrus">시트러스</span>
+                        <span class="tag-pill" data-loc="tagChocolate">초콜릿</span>
+                    </div>
+                </div>
+
+                <!-- Text Area -->
+                <div class="input-group">
+                    <textarea class="form-textarea" id="rev-text" maxlength="300" data-loc="reviewPlaceholder" placeholder="이 위스키의 맛과 향은 어땠나요? 한 줄 평을 남겨보세요."></textarea>
+                </div>
+            </section>
+
+            <!-- Mode B: Price Report Form -->
+            <section class="form-section" id="form-price">
+                <!-- Whiskey Select -->
+                <div class="input-group">
+                    <select class="form-select" id="pr-whiskey">
+                        <option value="" disabled selected data-loc="selectWhiskey">위스키 선택</option>
+                        <option value="1">Stagg Jr. (Barrel Proof)</option>
+                        <option value="2">Balvenie 12Y DoubleWood</option>
+                    </select>
+                </div>
+
+                <!-- Price Input -->
+                <div class="input-group">
+                    <label class="input-label" data-loc="priceLabel">구매 가격</label>
+                    <div class="currency-wrapper">
+                        <input type="number" class="form-input" id="pr-price" placeholder="0">
+                        <span class="currency-suffix" id="currency-suffix">원</span>
+                    </div>
+                </div>
+
+                <!-- Location Input -->
+                <div class="input-group">
+                    <label class="input-label" data-loc="locationLabel">구매처 (예: 코스트코 부산)</label>
+                    <input type="text" class="form-input" id="pr-location">
+                </div>
+
+                <!-- Date Picker -->
+                <div class="input-group">
+                    <label class="input-label" data-loc="dateLabel">구매 일자</label>
+                    <input type="date" class="form-input" id="pr-date">
+                </div>
+            </section>
+
+            <!-- Bottom Image Attachment -->
+            <div class="attachment-box" id="attachment-box">
+                <i class="ph ph-camera"></i>
+                <span data-loc="attachPhoto">영수증 또는 보틀 사진 첨부</span>
+            </div>
+        </main>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="write.js"></script>
+</body>
+</html>

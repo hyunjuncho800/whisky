@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiskyVibe - Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="app-header result-header">
+            <button class="icon-btn" onclick="window.location.href='index.html'" aria-label="Back">
+                <i class="ph ph-arrow-left"></i>
+            </button>
+            <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">KR | EN</button>
+        </header>
+
+        <main class="content-scroll result-content">
+            <!-- Hero / Match Result -->
+            <section class="result-hero">
+                <h2 class="result-title-label" data-loc="perfectDram">당신의 완벽한 위스키</h2>
+                <!-- We reuse the bottle image generated previously -->
+                <img id="matched-bottle-img" src="C:\Users\HJ\.gemini\antigravity\brain\1aee8685-af20-45bf-9761-73b82b6af4dd\whiskey_bottle_1_1782803718662.png" alt="Stagg" class="matched-bottle-img">
+                <h3 id="matched-name" class="matched-name">Stagg Jr. (Barrel Proof)</h3>
+                
+                <div class="tasting-notes">
+                    <div class="note-row">
+                        <span class="note-label" data-loc="sweetness">Sweetness</span>
+                        <div class="note-bar-bg"><div id="bar-sweetness" class="note-bar-fill" style="width: 75%;"></div></div>
+                    </div>
+                    <div class="note-row">
+                        <span class="note-label" data-loc="smoky">Smoky</span>
+                        <div class="note-bar-bg"><div id="bar-smoky" class="note-bar-fill" style="width: 20%;"></div></div>
+                    </div>
+                    <div class="note-row">
+                        <span class="note-label" data-loc="intensity">Intensity</span>
+                        <div class="note-bar-bg"><div id="bar-intensity" class="note-bar-fill" style="width: 95%;"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Premium Batch Info Section -->
+            <section class="batch-section" id="batch-section">
+                <div class="section-header" style="padding:0; margin-bottom:12px;">
+                    <h2 class="section-title" data-loc="batchInfo">마니아 배치 정보</h2>
+                </div>
+                
+                <div class="batch-tabs" id="batch-tabs">
+                    <!-- Injected via JS -->
+                </div>
+
+                <div class="batch-info-card" id="batch-info-card">
+                    <div class="batch-badge" id="batch-badge" style="display:none;" data-loc="bestBatch">추천배치</div>
+                    <div class="batch-stats">
+                        <div class="stat-item">
+                            <span class="stat-val" id="stat-abv">--</span>
+                            <span class="stat-lbl">ABV</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val" id="stat-age">--</span>
+                            <span class="stat-lbl" data-loc="ageLabel">숙성</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val" id="stat-rating">--</span>
+                            <span class="stat-lbl" data-loc="expertRating">전문가 평점</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Price Board -->
+            <section class="price-reports-section" style="padding-top: 10px;">
+                <div class="section-header">
+                    <h2 class="section-title" data-loc="livePrice">실시간 시세 제보</h2>
+                </div>
+                <div class="horizontal-scroll" id="price-container">
+                </div>
+                <div style="padding: 0 24px;">
+                    <button class="btn-outline" data-loc="reportPrice">+ 시세 제보하기</button>
+                </div>
+            </section>
+
+            <!-- User Reviews -->
+            <section class="community-feed-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-loc="userReviews">유저 한 줄 평</h2>
+                </div>
+                <div class="feed-container" id="review-container" style="padding: 0 24px;">
+                </div>
+            </section>
+        </main>
+
+        <!-- Sticky Bottom CTA -->
+        <button class="sticky-bottom-btn">
+            <i class="ph-bold ph-pencil-simple"></i>
+            <span data-loc="writeReview">리뷰 쓰기</span>
+        </button>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="result.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiskyVibe - My Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header: Minimal for My Bar -->
+        <header class="app-header">
+            <h1 class="logo" data-loc="myBarTitle">내 바</h1>
+            <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()">KR | EN</button>
+        </header>
+
+        <main class="content-scroll" style="padding-bottom: 80px;">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="profile-avatar-wrap">
+                    <img src="C:\Users\HJ\.gemini\antigravity\brain\1aee8685-af20-45bf-9761-73b82b6af4dd\avatar_2_1782803732172.png" alt="User Profile" class="profile-avatar">
+                    <div class="profile-level-badge" id="profile-badge">Novice</div>
+                </div>
+                <h2 class="profile-username" id="profile-name">CaskHunter</h2>
+                
+                <div class="level-progress-wrap">
+                    <div class="level-info">
+                        <span><span data-loc="levelText">레벨</span> <span id="profile-level-num">1</span></span>
+                        <span id="profile-exp-text">0 / 100 EXP</span>
+                    </div>
+                    <div class="level-bar-bg">
+                        <div class="level-bar-fill" id="profile-exp-bar" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Virtual Cabinet -->
+            <section class="cabinet-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-loc="myVirtualCabinet">나의 가상 장식장</h2>
+                </div>
+                <div class="cabinet-grid" id="cabinet-grid">
+                    <!-- Dynamic Items Go Here -->
+                </div>
+            </section>
+
+            <!-- Badges -->
+            <section class="badges-section">
+                <div class="section-header">
+                    <h2 class="section-title" data-loc="unlockedBadges">언락 뱃지</h2>
+                </div>
+                <div class="badges-scroll" id="badges-container">
+                    <!-- Dynamic Badges Go Here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="ph ph-house"></i>
+                <span data-loc="navHome">Home</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="ph-fill ph-brandy"></i>
+                <span data-loc="navMyBar">My Bar</span>
+            </a>
+        </nav>
+
+        <!-- Level Up Modal -->
+        <div class="modal-overlay" id="levelup-modal">
+            <div class="modal-content">
+                <i class="ph-fill ph-trend-up modal-icon"></i>
+                <h3 class="modal-title" data-loc="levelUpModalTitle">레벨 업 축하합니다!</h3>
+                <div class="modal-level" id="modal-level-text">Level 2</div>
+                <button class="modal-btn" onclick="closeLevelModal()">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="mybar.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿Whisky_ID,Brand,Name_KO,Name_EN,Category,Sweetness,Smoky,Price_Range,Batch_Identifier,ABV_Pct,Batch_Details,Expert_Ratings,Is_Recommended
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2025(추천),142.8 proof(71.4도),숙성기간: 15년 4개월,브레이킹버번: 4.5 | 위스키베이스: 89.8 | 프레드미닉 Top100: 1위 | 디스틸러: 4.69 / 91,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2024(추천),136.1 proof(68.05도),숙성기간: 15년 2개월,브레이킹버번: 4.5 | 위스키베이스: 90.47 | 프레드미닉 Top100: 3위 | 위스키애드버킷: 92 | 디스틸러: 4.63,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2023(추천),135.0 proof(67.5도),숙성기간: 15년 3개월,브레이킹버번: 4.0 | 위스키베이스: 90.48 | 프레드미닉 Top100: 15위 | 디스틸러: 4.68 / 95,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2022((추천),138.7 proof(69.35도),숙성기간: 15년 5개월,브레이킹버번: 4.5 | 위스키베이스: 90.86 | 프레드미닉 Top100: 3위 | 디스틸러: 4.7,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2021,미출시,숙성기간: 미출시,미출시,False
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2020(추천),130.4 proof( 65.2도),숙성기간: 15년 4개월,브레이킹버번: 4.0 | 위스키베이스: 90.51 | 위스키애드버킷: 95 | 디스틸러: 4.65 / 96,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2019(추천),116.9 proof(58.45도),숙성기간: 15년 3개월,위스키베이스: 89.89 | 위스키애드버킷: 94 | 디스틸러: 4.6 / 98,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2018(추천),124.9 proof(62.45도),숙성기간: 15년 4개월,브레이킹버번: 4.5 | 위스키베이스: 90.18 | 위스키애드버킷: 95 | 디스틸러: 4.58 /93,True
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2017,129.2 proof(64.6도),숙성기간: 15년 3개월,위스키베이스: 89.60 | 위스키애드버킷: 94 | 디스틸러: 4.66 / 94,False
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2016,144.1 proof(72.05도),숙성기간: 15년 4개월,위스키베이스: 89.85 | 위스키애드버킷: 86 | 디스틸러: 4.51 / 93,False
+GTS,Buffalo Trace,조지 T. 스태그,George T. Stagg,Bourbon,Sherry,Subtle,Rare,2015,138.2 proof(69.1도),숙성기간: 15년 1개월,위스키베이스: 88.93 | 위스키애드버킷: 94 | 디스틸러: 4.59 / 91,False
+LITTLE_BOOK,Jim Beam,리틀 북,Little Book,Bourbon,Vanilla,Subtle,Rare,2025 Infinite Ed 2,120.4 proof (60.2도),22년+10년+7년 버번,브레이킹버번: 4.0,False
+LITTLE_BOOK,Jim Beam,리틀 북,Little Book,Bourbon,Vanilla,Subtle,Rare,2025 챕터 9 'None For Granted',121.8 proof (60.9도),7~11년 버번 + 라이,브레이킹버번: 3.5 | 위스키베이스: 89.5 | 버번컬쳐: 7.7 | 위스키애드버킷: 94,True
+LITTLE_BOOK,Jim Beam,리틀 북,Little Book,Bourbon,Vanilla,Subtle,Rare,2024 Infinite Ed 1,119.3 proof (59.65도),7~20년 버번,브레이킹버번: 3.5 | 위스키베이스: 90.25 | 버번컬쳐: 8.6 | 프레드미닉 Top100: 5위 | 위스키애드버킷: 94,True
+LITTLE_BOOK,Jim Beam,리틀 북,Little Book,Bourbon,Vanilla,Subtle,Rare,2024 챕터 8 'Path Not Taken',118.2 proof (59.1도),4~18년 버번 + 라이 (24년 미국위스키 Top5),브레이킹버번: 4.0 | 위스키베이스: 90.08 | 버번컬쳐: 8.7 | 디스틸러: 91,True
+LITTLE_BOOK,Jim Beam,리틀 북,Little Book,Bourbon,Vanilla,Subtle,Rare,2023 챕터 7 'The Retrospect',118.1 proof (59.05도),4~18년 버번 + 라이 (23년 미국위스키 Top5),브레이킹버번: 4.0 | 위스키베이스: 89.2 | 버번컬쳐: 8.1 | 위스키애드버킷: 95,True
+RUSSELL_13,Wild Turkey,러셀 리저브 13년,Russell's Reserve 13 Year,Bourbon,Vanilla,None,Rare,배치1 (2021-04),114.8 proof (57.4도),고숙성(14~19년) 배럴 20% 이상 포함(추정),프레드미닉 최고의 위스키 | Rare Bird: 4.75 | 위스키베이스: 90.45,True
+RUSSELL_13,Wild Turkey,러셀 리저브 13년,Russell's Reserve 13 Year,Bourbon,Vanilla,None,Rare,배치2 (2021-12),114.8 proof (57.4도),고숙성(14~19년) 배럴 10% 전후 포함(추정),"디스틸러: 전문가 89점, 소비자 4.35",True
+RUSSELL_13,Wild Turkey,러셀 리저브 13년,Russell's Reserve 13 Year,Bourbon,Vanilla,None,Rare,배치3 (2022-05),114.8 proof (57.4도),고숙성 배럴 10% 전후 포함 | 20년 숙성 배럴 일부 사용,레딧 리뷰: 만점급 | 브레이킹버번: 4.5 | 디스틸러: 4.38,True
+RUSSELL_13,Wild Turkey,러셀 리저브 13년,Russell's Reserve 13 Year,Bourbon,Vanilla,None,Rare,배치4 (2023-03),114.8 proof (57.4도),고숙성(14년 위주) 배럴 5% 전후 포함,디스틸러: 소비자 4.37,False
+RUSSELL_13,Wild Turkey,러셀 리저브 13년,Russell's Reserve 13 Year,Bourbon,Vanilla,None,Rare,배치5 (2023-05),114.8 proof (57.4도),고숙성(14년 위주) 배럴 5% 전후 포함,위스키베이스: 89.8 | 디스틸러: 4.37,True
+RUSSELL_13,Wild Turkey,러셀 리저브 13년,Russell's Reserve 13 Year,Bourbon,Vanilla,None,Rare,배치6 (2025 Spring),123.8 proof (61.9도),고숙성 배럴 극소량 추정(풍미 밸런스용),위스키베이스: 88.67 | Vinepair: 95 | 디스틸러: 전문가 90,True
+BOOKERS,Jim Beam,북커스,Booker's,Bourbon,Vanilla,None,Sipping,2025-01 (Barry's Batch),125.7 proof (62.95도),7년 2개월,위스키베이스: 87.5 | 위스키애드버킷: 94 | 디스틸러: 4.38,True
+BOOKERS,Jim Beam,북커스,Booker's,Bourbon,Vanilla,None,Sipping,The Reserves 2024,125.9 proof (62.85도),8년 2개월,위스키베이스: 90.5 | 위스키애드버킷: 91 | 브레이킹버번: 4.5 | Top5 Bourbon,True
+BOOKERS,Jim Beam,북커스,Booker's,Bourbon,Vanilla,None,Sipping,2022-03 (Kentucky Tea),126.5 proof (63.25도),7년 4개월,위스키베이스: 88.83 | 프레드미닉 Top100: 6위 | 디스틸러: 4.29,True
+BOOKERS,Jim Beam,북커스,Booker's,Bourbon,Vanilla,None,Sipping,2022-02 (Lumberyard),124.8 proof (62.40도),7년 1개일,위스키베이스: 87.91 | 브레이킹버번: 4.0 | 프레드미닉: 22위,True
+STAGG,Buffalo Trace,스태그 (구 스태그 주니어),Stagg (formerly Stagg Jr.),Bourbon,Sherry,Subtle,Sipping,Batch 22A (2023),66.1% (132.2 proof),23년 출시,위스키베이스: 89.10 | 프레드미닉 23년 100대 위스키 8위 | 디스틸러: 4.54,True
+STAGG,Buffalo Trace,스태그 (구 스태그 주니어),Stagg (formerly Stagg Jr.),Bourbon,Sherry,Subtle,Sipping,Batch 18 (2022),65.5% (131 proof),22년 출시,위스키베이스: 88.64 | 브레이킹버번: 3.0 | 프레드미닉 22년 7위,True
+STAGG,Buffalo Trace,스태그 (구 스태그 주니어),Stagg (formerly Stagg Jr.),Bourbon,Sherry,Subtle,Sipping,Batch 12 (2019),66.15% (132.3 proof),19년 출시,위스키베이스: 88.75 | 브레이킹버번: 4.5 | 2019년 최고 위스키 선정,True
+BALVENIE_12,Balvenie,발베니 12년 더블우드,Balvenie 12Y DoubleWood,Single Malt,Vanilla,None,Sipping,Standard (N/A),40%,버번 캐스크 후 셰리 캐스크 피니시,위스키베이스: 83.5,True
+GLENFIDDICH_12,Glenfiddich,글렌피딕 12년,Glenfiddich 12Y,Single Malt,Vanilla,None,Sipping,Standard (N/A),40%,싱글몰트의 대명사 서양배 향,위스키베이스: 80.2,False
+GLENDRONACH_12,Glendronach,글렌드로낙 12년,Glendronach 12Y,Single Malt,Sherry,None,Sipping,Standard (N/A),43%,셰리 몬스터 입문 정석 꾸덕함,위스키베이스: 84.1,True
+TALISKER_10,Talisker,탈리스커 10년,Talisker 10Y,Single Malt,Dry,Subtle,Daily,Standard (N/A),45.8%,피트 입문 추천 짭조름한 바다의 맛,위스키베이스: 85.0,True
+ARDBEG_10,Ardbeg,아드벡 10년,Ardbeg 10Y,Single Malt,Dry,Intense,Sipping,Standard (N/A),46%,강렬한 피트 연기 향 매니아 강추,위스키베이스: 86.2,True
+MAKERS_MARK,Maker's Mark,메이커스 마크,Maker's Mark,Bourbon,Vanilla,None,Daily,Standard (N/A),45%,부드러운 버번 위스키 하이볼 대장,위스키베이스: 79.5,False
+JOHNNIE_BLACK,Johnnie Walker,조니워커 블랙라벨,Johnnie Walker Black Label,Blended,Vanilla,Subtle,Daily,Standard (N/A),40%,최고의 밸런스 가성비 위스키,위스키베이스: 78.5,True
+JOHNNIE_BLUE,Johnnie Walker,조니워커 블루라벨,Johnnie Walker Blue Label,Blended,Vanilla,Subtle,Rare,Standard (N/A),40%,부드러운 목넘김의 끝판왕 선물용 최고,위스키베이스: 87.5,True
