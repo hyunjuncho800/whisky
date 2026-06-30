@@ -2,8 +2,8 @@ const surveyData = [
     {
         id: 1,
         question: {
-            en: "What kind of sweetness do you prefer in your dram?",
-            kr: "어떤 종류의 단맛을 선호하시나요?"
+            en: "What kind of sweetness<br>do you prefer in your dram?",
+            kr: "어떤 종류의 단맛을<br>선호하시나요?"
         },
         options: [
             {
@@ -29,8 +29,8 @@ const surveyData = [
     {
         id: 2,
         question: {
-            en: "How do you feel about smoky flavors and peat smoke?",
-            kr: "스모키한 향이나 피트(이탄) 향에 대해 어떻게 생각하시나요?"
+            en: "How do you feel about<br>smoky flavors and peat?",
+            kr: "스모키한 향이나 피트 향에 대해<br>어떻게 생각하시나요?"
         },
         options: [
             {
@@ -56,8 +56,8 @@ const surveyData = [
     {
         id: 3,
         question: {
-            en: "What kind of mouthfeel and intensity are you looking for?",
-            kr: "어떤 바디감과 타격감을 찾으시나요?"
+            en: "What kind of mouthfeel and<br>intensity are you looking for?",
+            kr: "어떤 바디감과 타격감을<br>찾으시나요?"
         },
         options: [
             {
@@ -77,8 +77,8 @@ const surveyData = [
     {
         id: 4,
         question: {
-            en: "What is the occasion for this bottle?",
-            kr: "어떤 상황에서 드실 예정인가요?"
+            en: "What is the occasion<br>for this bottle?",
+            kr: "어떤 상황에서<br>드실 예정인가요?"
         },
         options: [
             {
