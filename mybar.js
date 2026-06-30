@@ -2,10 +2,10 @@
 
 // Mock whisky catalog for resolving names and images
 const whisky_catalog = {
-    "1": { name: "Stagg Jr.", nameEn: "Stagg Jr.", img: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\whiskey_bottle_1_1782803718662.png" },
-    "2": { name: "발베니 12년 더블우드", nameEn: "Balvenie 12Y", img: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\whiskey_bottle_1_1782803718662.png" },
-    "3": { name: "라가불린 16년", nameEn: "Lagavulin 16Y", img: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\whiskey_bottle_1_1782803718662.png" },
-    "8": { name: "부커스 버번", nameEn: "Booker's Bourbon", img: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\whiskey_bottle_1_1782803718662.png" }
+    "1": { name: "Stagg Jr.", nameEn: "Stagg Jr.", img: "assets/whiskey_bottle.png" },
+    "2": { name: "발베니 12년 더블우드", nameEn: "Balvenie 12Y", img: "assets/whiskey_bottle.png" },
+    "3": { name: "라가불린 16년", nameEn: "Lagavulin 16Y", img: "assets/whiskey_bottle.png" },
+    "8": { name: "부커스 버번", nameEn: "Booker's Bourbon", img: "assets/whiskey_bottle.png" }
 };
 
 // All available badges in the system

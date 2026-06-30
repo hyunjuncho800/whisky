@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 whisky_id: revWhiskey.value,
                 batch_id: document.getElementById('rev-batch').value || null,
                 user_name: "MyProfile",
-                user_avatar: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\avatar_2_1782803732172.png",
+                user_avatar: "assets/avatar.png",
                 rating: currentRating,
                 tags: Array.from(document.querySelectorAll('.tag-pill.active')).map(t => t.textContent),
                 text: revText.value.trim(),

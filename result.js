@@ -31,9 +31,9 @@ const default_price_reports = [
 ];
 
 const default_reviews = [
-    { id: "r1", whisky_id: "1", user_name: "CaskHunter", user_avatar: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\avatar_2_1782803732172.png", rating: 5, text: "The perfect cask strength punch! Batch 23B is incredibly cherry-forward.", likes_count: 120 },
-    { id: "r2", whisky_id: "1", user_name: "BourbonLover", user_avatar: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\avatar_2_1782803732172.png", rating: 4, text: "Too hot for me straight, but amazing with a few drops of water.", likes_count: 85 },
-    { id: "r3", whisky_id: "2", user_name: "MaltExplorer", user_avatar: "C:\\Users\\HJ\\.gemini\\antigravity\\brain\\1aee8685-af20-45bf-9761-73b82b6af4dd\\avatar_2_1782803732172.png", rating: 5, text: "Always a classic. The honey and vanilla notes are perfectly balanced.", likes_count: 200 }
+    { id: "r1", whisky_id: "1", user_name: "CaskHunter", user_avatar: "assets/avatar.png", rating: 5, text: "The perfect cask strength punch! Batch 23B is incredibly cherry-forward.", likes_count: 120 },
+    { id: "r2", whisky_id: "1", user_name: "BourbonLover", user_avatar: "assets/avatar.png", rating: 4, text: "Too hot for me straight, but amazing with a few drops of water.", likes_count: 85 },
+    { id: "r3", whisky_id: "2", user_name: "MaltExplorer", user_avatar: "assets/avatar.png", rating: 5, text: "Always a classic. The honey and vanilla notes are perfectly balanced.", likes_count: 200 }
 ];
 
 // Ensure local storage is seeded
