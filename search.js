@@ -120,8 +120,7 @@ function renderResults(query) {
         const info = group.info;
         const displayName = lang === 'en' ? info.Name_EN : info.Name_KO;
         
-        // We just use the placeholder image since real images aren't in CSV
-        const imgUrl = "assets/whiskey_bottle.png"; 
+        const imgUrl = info.image_url || "assets/whiskey_bottle.png";
 
         const card = document.createElement('div');
         card.className = 'result-card';

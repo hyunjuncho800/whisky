@@ -178,7 +178,7 @@ function renderUI() {
     const displayName = lang === 'en' ? info.Name_EN : info.Name_KO;
     document.getElementById('matched-name').textContent = displayName;
     
-    const imgUrl = "assets/whiskey_bottle.png"; // Placeholder mapping
+    const imgUrl = info.image_url || "assets/whiskey_bottle.png";
     document.getElementById('matched-bottle-img').src = imgUrl;
 
     const profile = getSynthesizedProfile(info);

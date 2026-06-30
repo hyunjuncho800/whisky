@@ -63,7 +63,7 @@ async function initMyBar() {
                 whisky_catalog[item.Whisky_ID] = {
                     name: item.Name_KO,
                     nameEn: item.Name_EN,
-                    img: "assets/whiskey_bottle.png"
+                    img: item.image_url || "assets/whiskey_bottle.png"
                 };
             }
         });
